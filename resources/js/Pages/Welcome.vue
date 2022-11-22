@@ -9,4 +9,14 @@
         <a class="pr-6" href="">Kontakt</a>
     </div>
     </nav>
+    
 </template>
+
+<script setup>
+        const props = defineProps({
+            products: {
+                type: Object,
+                default: null,
+            },
+        })
+    </script>
