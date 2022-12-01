@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class ShopController extends Controller
 {
-    return Inertia::render('Shop/index', [
-        'products' => Product::paginate(12),
-    ]);
+    public function index() {
+        return Inertia::render('Welcome', [
+            'products' =>Product::paginate(12),
+        ]);
+    }
 }
+
+?>

@@ -1,3 +1,5 @@
+
+
 <template>
     <nav class="h-16 w-full bg-white flex  items-center justify-between">
         <div class="">
@@ -10,6 +12,19 @@
     </div>
     </nav>
     
+    <div class="h-full w-full flex flex-wrap justify-center">
+        
+
+        <div class="h-64 w-64 bg-white m-5 rounded-lg p-2" v-for="p in products.data" :key="p">
+            {{p.name}}
+            <br> <br>
+            {{p.description}}
+            <br><br>
+            Hind: {{p.price}}.00€
+        </div>
+    </div>
+
+
 </template>
 
 <script setup>
@@ -19,4 +34,6 @@
                 default: null,
             },
         })
-    </script>
+        console.log(props.products);
+
+</script>.
