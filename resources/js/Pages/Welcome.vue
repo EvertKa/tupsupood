@@ -15,12 +15,15 @@
     <div class="h-full w-full flex flex-wrap justify-center">
         
 
-        <div class="h-64 w-64 bg-white m-5 rounded-lg p-2" v-for="p in products.data" :key="p">
+        <div class="h-auto w-64 bg-white m-5 rounded-lg p-2" v-for="p in products.data" :key="p">
+            <img class="w-44 h-32" src="https://www.nicorex.eu/failid/kataloog_tooted/410x320/pablo-snus-ice-cold-50mg.jpg?v=2" alt="" srcset="">
             {{p.name}}
-            <br> <br>
-            {{p.description}}
-            <br><br>
+            <br>
+            Kirjeldus: {{p.description}}
+            <br>
             Hind: {{p.price}}.00€
+
+            <div class="h-16 w-32 bg-orange-500 rounded-md text-center p-5 text-white">OSTA</div>
         </div>
     </div>
 
